@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('memories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('image');
+            $table->longText('image');
             $table->text('description')->nullable();
             $table->date('date')->nullable();
             $table->timestamps();
