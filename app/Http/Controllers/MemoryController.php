@@ -61,6 +61,6 @@ class MemoryController extends Controller
      */
     public function destroy(Memory $memory)
     {
-        //
+        $memory->delete();
     }
 }
