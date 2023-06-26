@@ -11,7 +11,7 @@ class UpdateMemoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class UpdateMemoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|string',
+            'image' => 'required|string',
+            'description' => 'nullable|string',
+            'date' => 'nullable|date',
         ];
     }
 }

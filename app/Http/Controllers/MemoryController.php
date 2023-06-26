@@ -53,7 +53,7 @@ class MemoryController extends Controller
      */
     public function update(UpdateMemoryRequest $request, Memory $memory)
     {
-        //
+        $memory->update($request->validated());
     }
 
     /**
